@@ -1,6 +1,8 @@
 from fastapi import FastAPI
+from hanlers import routers
 
-from hanlers import router
 
 app = FastAPI()
-app.include_router(router=router)
+
+for router in routers:
+    app.include_router(router=router)

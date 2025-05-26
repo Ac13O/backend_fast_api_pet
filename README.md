@@ -3,7 +3,7 @@ venv creation (Windows):
 - `python -m venv .venv`
 
 venv activation(Windows):
-- `.\\.venv\cripts\activate`
+- `.\\.venv\scripts\activate`
 
 install fastapi
 - `pip install "fastapi[standard]"`

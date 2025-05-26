@@ -1,13 +1,18 @@
 from fastapi import APIRouter
 
-router = APIRouter(prefix="/tasks", tags=["tasks"])
+router = APIRouter(prefix="/tasks", tags=["tasks_"])
 
 
-@router.get("/ping_app")
-async def ping_app():
-    return {"ping_app": "OK"}
+@router.get("/")
+async def simple():
+    return []
 
 
-@router.get("/ping_db")
-async def ping_db():
-    return {"ping_db": "OK"}
+@router.get("/all")
+async def get_tasks():
+    return {"tasks": "all"}
+
+
+@router.post("/task/{taskid}")
+async def create_task(taskid):
+    return
